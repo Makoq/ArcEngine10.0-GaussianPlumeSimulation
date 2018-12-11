@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{46300C3C-F41D-4318-B20A-FEDE9751AE66}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>地信开发大作业</RootNamespace>
+    <AssemblyName>最短路径分析</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.3DAnalyst, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AnalysisTools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86" />
+    <Reference Include="ESRI.ArcGIS.ArcCatalogUI, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86" />
+    <Reference Include="ESRI.ArcGIS.Carto" />
+    <Reference Include="ESRI.ArcGIS.CatalogUI, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls" />
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRaster, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display" />
+    <Reference Include="ESRI.ArcGIS.DisplayUI, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessor, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86" />
+    <Reference Include="ESRI.ArcGIS.GlobeCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.NetworkAnalyst, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Output, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SpatialAnalystTools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86" />
+    <Reference Include="ESRI.ArcGIS.System" />
+    <Reference Include="ESRI.ArcGIS.SystemUI" />
+    <Reference Include="ESRI.ArcGIS.Version, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="各类\OperateMap.cs" />
+    <Compile Include="控件界面设计\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="控件界面设计\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件界面设计\FormAttribute2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="控件界面设计\FormAttribute2.Designer.cs">
+      <DependentUpon>FormAttribute2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件界面设计\FormIntroduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="控件界面设计\FormIntroduction.Designer.cs">
+      <DependentUpon>FormIntroduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件界面设计\frmSymbolSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="控件界面设计\frmSymbolSelector.Designer.cs">
+      <DependentUpon>frmSymbolSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="最短路径分析\AddNetBarriesTool.cs" />
+    <Compile Include="最短路径分析\AddNetStopsTool.cs" />
+    <Compile Include="控件界面设计\buffer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="控件界面设计\buffer.Designer.cs">
+      <DependentUpon>buffer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="各类\EnumQueryType.cs" />
+    <Compile Include="各类\ExportMap.cs" />
+    <Compile Include="控件界面设计\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="控件界面设计\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件界面设计\FormAtrribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="控件界面设计\FormAtrribute.Designer.cs">
+      <DependentUpon>FormAtrribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件界面设计\FormExportMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="控件界面设计\FormExportMap.Designer.cs">
+      <DependentUpon>FormExportMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件界面设计\FormMeasureResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="控件界面设计\FormMeasureResult.Designer.cs">
+      <DependentUpon>FormMeasureResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件界面设计\FormQueryByAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="控件界面设计\FormQueryByAttribute.Designer.cs">
+      <DependentUpon>FormQueryByAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件界面设计\FormQueryBySpatial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="控件界面设计\FormQueryBySpatial.Designer.cs">
+      <DependentUpon>FormQueryBySpatial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件界面设计\frmPrintPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="控件界面设计\frmSymbol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="控件界面设计\frmSymbol.Designer.cs">
+      <DependentUpon>frmSymbol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="各类\NetWorkAnalysClass.cs" />
+    <Compile Include="各类\OperatePageLayout.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="最短路径分析\ShortPathSolveCommand.cs" />
+    <EmbeddedResource Include="控件界面设计\buffer.resx">
+      <DependentUpon>buffer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件界面设计\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件界面设计\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件界面设计\FormAtrribute.resx">
+      <DependentUpon>FormAtrribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件界面设计\FormAttribute2.resx">
+      <DependentUpon>FormAttribute2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件界面设计\FormExportMap.resx">
+      <DependentUpon>FormExportMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件界面设计\FormIntroduction.resx">
+      <DependentUpon>FormIntroduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件界面设计\FormMeasureResult.resx">
+      <DependentUpon>FormMeasureResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件界面设计\FormQueryByAttribute.resx">
+      <DependentUpon>FormQueryByAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件界面设计\FormQueryBySpatial.resx">
+      <DependentUpon>FormQueryBySpatial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件界面设计\frmPrintPreview.resx">
+      <DependentUpon>frmPrintPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件界面设计\frmSymbol.resx">
+      <DependentUpon>frmSymbol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\x86\Debug\最短路径分析.frmShortPathSolver.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\最短路径分析.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\x86\Release\最短路径分析.frmShortPathSolver.resources" />
+    <EmbeddedResource Include="obj\x86\Release\最短路径分析.Properties.Resources.resources" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="bin\Debug\最短路径分析.vshost.exe.manifest" />
+    <None Include="bin\Release\最短路径分析.vshost.exe.manifest" />
+    <None Include="最短路径分析\ClassDiagram1.cd" />
+    <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\x86\Debug\GenerateResource.read.1.tlog" />
+    <None Include="obj\x86\Debug\GenerateResource.write.1.tlog" />
+    <None Include="obj\x86\Debug\ResolveAssemblyReference.cache" />
+    <None Include="obj\x86\Debug\最短路径分析.csproj.GenerateResource.Cache" />
+    <None Include="obj\x86\Debug\最短路径分析.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\x86\Release\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\x86\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\x86\Release\GenerateResource.read.1.tlog" />
+    <None Include="obj\x86\Release\GenerateResource.write.1.tlog" />
+    <None Include="obj\x86\Release\ResolveAssemblyReference.cache" />
+    <None Include="obj\x86\Release\最短路径分析.csproj.GenerateResource.Cache" />
+    <None Include="obj\x86\Release\最短路径分析.csprojResolveAssemblyReference.cache" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="控件界面设计\frmSymbolSelector.resx">
+      <DependentUpon>frmSymbolSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="最短路径分析\AddNetStopsTool.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="最短路径分析\AddNetStopsTool.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="最短路径分析\AddNetBarriesTool.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="最短路径分析\AddNetBarriesTool.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="最短路径分析\ShortPathSolveCommand.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\最短路径分析.exe" />
+    <Content Include="bin\Debug\最短路径分析.pdb" />
+    <Content Include="bin\Debug\最短路径分析.vshost.exe" />
+    <Content Include="bin\Release\最短路径分析.exe" />
+    <Content Include="bin\Release\最短路径分析.pdb" />
+    <Content Include="bin\Release\最短路径分析.vshost.exe" />
+    <Content Include="obj\x86\Debug\最短路径分析.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\x86\Debug\最短路径分析.exe" />
+    <Content Include="obj\x86\Debug\最短路径分析.pdb" />
+    <Content Include="obj\x86\Release\最短路径分析.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\x86\Release\最短路径分析.exe" />
+    <Content Include="obj\x86\Release\最短路径分析.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\x86\Debug\TempPE\" />
+    <Folder Include="obj\x86\Release\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
